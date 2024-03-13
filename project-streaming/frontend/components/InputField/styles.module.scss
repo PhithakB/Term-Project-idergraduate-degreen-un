@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+.field{
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+
+    p{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1vmax;
+        color: #000;
+    }
+
+    input{
+        font-family: 'Ubuntu', sans-serif;
+        width: 100%;
+        height: 30px;
+        color: #000;
+        font-size: 1vmax;
+        background-color: transparent;
+        border: 1px solid gray;
+        padding: 0.4vmax 1vmax;
+    }
+}

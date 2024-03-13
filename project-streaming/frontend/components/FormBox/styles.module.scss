@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+.formBox{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #FFF;
+    border-radius: 20px;
+    width: 30%;
+    height: fit-content;
+    padding: 2vmax;
+    margin-bottom: 52px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.5vmax;
+        color: #000;
+    }
+
+    .content{
+        font-family: 'Ubuntu', sans-serif;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        gap: 0.5vmax;
+    }
+}

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+.buttonA{
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    height: fit-content;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
+    background-color: #333;
+    color: #FFF;
+    font-size: 1vmax;
+    padding: 0.5vmax 0vmax;
+    cursor: pointer;
+}
+
+.buttonB{
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    margin-right: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
+    background-color: #281be7;
+    color: #FFF;
+    font-size: 1vmax;
+    padding: 0.2vmax 0.5vmax;
+    cursor: pointer;
+}
+
+.buttonC{
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
+    border: none;
+    width: 2vmax;
+    height: 2vmax;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+}

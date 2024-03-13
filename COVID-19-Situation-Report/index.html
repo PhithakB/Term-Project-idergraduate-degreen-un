@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>COVID-19 Situation Report</title>
+    <meta name="author" content="F Phithak" />
+    <meta charset="UTF-8" />
+    <meta name="title" content="COVID-19 Situation Report" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body id="bgcolor">
+    <div class="divICON">
+        <div class="divBlockAB" onclick="refreshPage()">
+            <svg xmlns="http://www.w3.org/2000/svg" id="refreshP" width="48" height="48" viewBox="0 0 24 24"><path d="M13.5 2c-5.621 0-10.211 4.443-10.475 10h-3.025l5 6.625 5-6.625h-2.975c.257-3.351 3.06-6 6.475-6 3.584 0 6.5 2.916 6.5 6.5s-2.916 6.5-6.5 6.5c-1.863 0-3.542-.793-4.728-2.053l-2.427 3.216c1.877 1.754 4.389 2.837 7.155 2.837 5.79 0 10.5-4.71 10.5-10.5s-4.71-10.5-10.5-10.5z"/></svg>
+            <p style="margin-top: -2%">รีเฟรช</p>
+        </div>
+    </div>
+      <h1 style="font-size: 350%">COVID-19 Situation Report</h1>
+      <h5 style="font-size: 150%; margin-top: -2%">
+        อัพเดตข้อมูลล่าสุด : <span id="UpdateDate"></span>
+      </h5>
+      <h5 style="font-size: 100%; margin-top: -2%">
+        ที่มา : <a id="SourceA" href="#" target="_blank"><span id="Source"></span></a>
+      </h5>
+
+    <div class="container">
+      <div class="containerA">
+        <div class="itemA" style="background-color: rgb(255, 177, 113)">
+          <div class="textShake">
+            <h1>ติดเชื้อสะสม</h1>
+            <h1 style="font-size: 350%; margin-top: -1%">
+              <span id="Confirmed"></span> คน
+            </h1>
+            <h3 style="margin-top: -3%">
+              ( เพิ่มขึ้น <span id="NewConfirmed"></span> คน )
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="containerB">
+        <div class="itemB" style="background-color: rgb(255, 137, 41)">
+            <div class="textShake">
+            <h1>หายแล้ว</h1>
+            <h1><span id="Recovered"></span> คน</h1>
+            </div>
+        </div>
+        <div class="itemB" style="background-color: rgb(253, 27, 27)">
+            <div class="textShake">
+                <h1>กำลังรักษา</h1>
+            <h1><span id="Hospitalized"></span> คน</h1>
+            </div>
+        </div>
+        <div class="itemB" style="background-color: rgb(165, 29, 29)">
+            <div class="textShake">
+                <h1>เสียชีวิต</h1>
+            <h1><span id="Deaths"></span> คน</h1>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+      function numberWithCommas(x) {
+        return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+      }
+
+      axios({
+        method: "get",
+        url: "https://covid19.ddc.moph.go.th/api/Cases/today-cases-all",
+        responseType: "json",
+      }).then(function (response) {
+        console.log(response);
+        document.getElementById("UpdateDate").innerHTML = response.data[0]["update_date"];
+        document.getElementById("Source").innerHTML = response.config["url"];
+        document.getElementById("SourceA").setAttribute("href", response.config["url"]);
+        document.getElementById("Confirmed").innerHTML = numberWithCommas(
+          response.data[0]["total_case"]
+        );
+        document.getElementById("NewConfirmed").innerHTML = numberWithCommas(
+          response.data[0]["new_case"]
+        );
+        document.getElementById("Recovered").innerHTML = numberWithCommas(
+          response.data[0]["total_recovered"]
+        );
+        document.getElementById("Hospitalized").innerHTML = numberWithCommas(
+          response.data[0]["new_recovered"]
+        );
+        document.getElementById("Deaths").innerHTML = numberWithCommas(
+          response.data[0]["total_death"]
+        );
+      });
+      function refreshPage(){
+          location.reload();
+      }
+    </script>
+  </body>
+</html>

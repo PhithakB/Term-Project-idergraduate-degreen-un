@@ -1,0 +1,143 @@
+* {
+  font-family: "Kanit", sans-serif;
+}
+a {
+  text-decoration: none !important;
+  color: rgb(0, 225, 255) !important;
+}
+.divICON {
+  position: relative;
+}
+.divBlockAB {
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 10px;
+  right: 5vw;
+  width: 4vw;
+  height: 12vh;
+  text-align: center;
+  background-color: rgb(0, 225, 255);
+  cursor: pointer;
+}
+#bgcolor {
+  width: fit-content;
+  height: fit-content;
+  animation: mymove 15s infinite linear;
+}
+
+@keyframes mymove {
+  0%{background-color: rgb(255, 0, 0);}
+  5%{background-color: rgb(255, 72, 0);}
+  20%{background-color: rgb(255, 238, 0);}
+  35%{background-color: rgb(51, 255, 0);}
+  50%{background-color: rgb(0, 247, 255);}
+  65%{background-color: rgb(0, 38, 255);}
+  80%{background-color: rgb(174, 0, 255);}
+  100%{background-color: rgb(255, 0, 0);}
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.containerA {
+  display: flex;
+  flex-direction: row;
+}
+.itemA {
+  width: 100vw;
+  height: 28vh;
+  border-radius: 10px;
+  padding: 1%;
+  text-align: center;
+}
+.itemA:hover {
+  animation: zoomA 0.5s forwards;
+}
+@keyframes zoomA {
+  from {
+    height: 28vh;
+  }
+  to {
+    height: 35vh;
+    font-size: 120%;
+    color: #fff;
+  }
+}
+.containerB {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 2vh;
+}
+.itemB {
+  width: 30vw;
+  height: 20vh;
+  border-radius: 10px;
+  padding: 1%;
+  text-align: center;
+}
+.itemB:hover {
+  animation: zoomB 0.5s forwards;
+}
+@keyframes zoomB {
+  from {
+    width: 30vw;
+    height: 20vh;
+  }
+  to {
+    width: 32vw;
+    height: 27vh;
+    font-size: 120%;
+    color: #fff;
+  }
+}
+#refreshP {
+  animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.textShake:hover{
+  animation: shake 1ms infinite ease-in-out;
+}
+@keyframes shake {
+  0% {
+      transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+      transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+      transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+      transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+

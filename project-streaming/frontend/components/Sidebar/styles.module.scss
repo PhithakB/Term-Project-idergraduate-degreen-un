@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+.sidebar{
+    font-family: 'Ubuntu', sans-serif;
+    width: 220px;
+    height: 93vh;
+    position:  sticky;
+    color: #FFF;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    font-size: 20px;
+    background-color: black;
+    border: 5px solid #000;
+    z-index: 25;
+    .account_setting{
+        font-family: 'Ubuntu', sans-serif;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid #FFF;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        cursor: pointer;
+    }
+    .account_setting:hover{
+        color: #000;
+        background-color: #FFF;
+    }
+
+    .profile{
+        font-family: 'Ubuntu', sans-serif;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid #FFF;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        cursor: pointer;
+    }
+    .profile:hover{
+        color: #000;
+        background-color: #FFF;
+    }
+    
+    .bookmark{
+        font-family: 'Ubuntu', sans-serif;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid #FFF;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        cursor: pointer;
+    }
+    .bookmark:hover{
+        color: #000;
+        background-color: #FFF;
+    }
+    
+    .watch_history{
+        font-family: 'Ubuntu', sans-serif;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid #FFF;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        cursor: pointer;
+    }
+    .watch_history:hover{
+        color: #000;
+        background-color: #FFF;
+    }
+    
+    .payment{
+        font-family: 'Ubuntu', sans-serif;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid #FFF;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        cursor: pointer;
+    }
+    .payment:hover{
+        color: #000;
+        background-color: #FFF;
+    }
+
+    .logout{
+        font-family: 'Ubuntu', sans-serif;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid #FFF;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        cursor: pointer;
+    }
+    .logout:hover{
+        color: #000;
+        background-color: #F00;
+    }
+}
