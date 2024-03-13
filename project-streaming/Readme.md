@@ -29,7 +29,7 @@ The project is a term project for undergraduate year 3. Faculty of Engineering D
 
 
 ### Start Application
-1. Run application
+1. Run application (Use 2 Terminal)
     ```sh
     cd frontend
     npm run dev
