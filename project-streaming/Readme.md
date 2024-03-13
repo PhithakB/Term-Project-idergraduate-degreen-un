@@ -2,8 +2,10 @@
 The project is a term project for undergraduate year 3. Faculty of Engineering Department of Computer Engineering Naresuan University
 
 ***Disclaimer***
+
 ***This project is not finish 100% and has a little problem***
-***Function it can work is watch trailer, bookmark(can view in databse but can't view in account), rename***
+
+***Function can work is watch trailer, bookmark(can view in databse but can't view in account), rename***
 
 ### Installation
 
