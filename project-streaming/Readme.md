@@ -9,7 +9,7 @@ The project is a term project for undergraduate year 3. Faculty of Engineering D
 
 ### Installation
 
-1. Install node
+1. Install node.js
     ```sh
     cd frontend
     npm install
